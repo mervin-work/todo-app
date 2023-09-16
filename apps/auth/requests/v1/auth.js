@@ -2,6 +2,12 @@
 
 const Joi = require('joi');
 
+/**
+ * Auth Routes
+ * 
+*/
+
+//Sign-in request schema validator
 const signInRequestSchema = Joi.object({
     username: Joi.string().required(),
     password: Joi.string().required(),

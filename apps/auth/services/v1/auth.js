@@ -1,11 +1,13 @@
 'use strict';
 
-/**
- * Auth Service
-*/
-
 const models = require('../../../../models');
 
+/**
+ * Auth Service
+ * 
+*/
+
+// get user by username
 const getUserByUsername = async(username) => {
     const user = await models.User.findOne({
         where: {

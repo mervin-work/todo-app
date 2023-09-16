@@ -8,6 +8,11 @@ const jwtUtil = require('../../../../utils/jwt');
 const logger = require('../../../../utils/logger').child({name: 'auth'});
 const httpConstants = require('http2').constants;
 
+/**
+ * Auth Controller
+ *
+*/
+
 const generateNonce = () => {
 
     return async(req, res) => {

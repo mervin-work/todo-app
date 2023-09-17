@@ -76,16 +76,42 @@ Below is the suggested folder structure for an organized development:
 ├── apps                    		# Modular configuration
 │   ├── auth                		# Module
 │   │   ├── v1              		# Version 1 APIs for this module
-│   │   │   ├── controller.js      # Controller for the module
-│   │   │   ├── index.js           # Module routes, schema validation
-│   │   │   └── service.js         # Database related operations
+│   │   │   ├── controllers         # Auth controllers folder
+│   │   │   ├─── auth.js            # Controller for the module
+│   │   │   ├── requests            # Auth Requests folder
+│   │   │   ├─── auth.js            # Requests module for schema validation
+│   │   │   ├── routes              # Auth routes folder
+│   │   │   ├─── auth.js            # Routes module for the module
+│   │   │   ├── services            # Auth services folder
+│   │   │   ├─── auth.js            # Database related operations
+│   │   └── v2              # Version 2 APIs for this module
+│   ├── todo                		# Module
+│   │   ├── v1              		# Version 1 APIs for this module
+│   │   │   ├── controllers         # Todo controllers folder
+│   │   │   ├─── todo.js            # Controller for the module
+│   │   │   ├── requests            # Todo Requests folder
+│   │   │   ├─── todo.js            # Requests module for schema validation
+│   │   │   ├── routes              # Todo routes folder
+│   │   │   ├─── todo.js            # Routes module for the module
+│   │   │   ├── services            # Todo services folder
+│   │   │   ├─── todo.js            # Database related operations
+│   │   └── v2              # Version 2 APIs for this module
+│   ├── user                		# Module
+│   │   ├── v1              		# Version 1 APIs for this module
+│   │   │   ├── controllers         # User controllers folder
+│   │   │   ├─── user.js            # Controller for the module
+│   │   │   ├── requests            # User Requests folder
+│   │   │   ├─── user.js            # Requests module for schema validation
+│   │   │   ├── routes              # User routes folder
+│   │   │   ├─── user.js            # Routes module for the module
+│   │   │   ├── services            # User services folder
+│   │   │   ├─── user.js            # Database related operations
 │   │   └── v2              # Version 2 APIs for this module
 ├── config                  # Sequelize configs directory
 ├── constants
 ├── middlewares
 ├── migrations              # Sequelize migrations directory
 ├── models                  # Sequelize models directory
-├── routes
 ├── seeders                 # Sequelize seeders directory
 ├── test                    # Test directory
 ├── utils

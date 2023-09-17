@@ -81,7 +81,7 @@ Below is the suggested folder structure for an organized development:
 │   │   │   ├── requests            # Auth Requests folder
 │   │   │   ├─── auth.js            # Requests module for schema validation
 │   │   │   ├── routes              # Auth routes folder
-│   │   │   ├─── auth.js            # Routes module for the module
+│   │   │   ├─── auth.js            # Routes module for routing
 │   │   │   ├── services            # Auth services folder
 │   │   │   ├─── auth.js            # Database related operations
 │   │   └── v2              # Version 2 APIs for this module
@@ -92,7 +92,7 @@ Below is the suggested folder structure for an organized development:
 │   │   │   ├── requests            # Todo Requests folder
 │   │   │   ├─── todo.js            # Requests module for schema validation
 │   │   │   ├── routes              # Todo routes folder
-│   │   │   ├─── todo.js            # Routes module for the module
+│   │   │   ├─── todo.js            # Routes module for routing
 │   │   │   ├── services            # Todo services folder
 │   │   │   ├─── todo.js            # Database related operations
 │   │   └── v2              # Version 2 APIs for this module
@@ -103,7 +103,7 @@ Below is the suggested folder structure for an organized development:
 │   │   │   ├── requests            # User Requests folder
 │   │   │   ├─── user.js            # Requests module for schema validation
 │   │   │   ├── routes              # User routes folder
-│   │   │   ├─── user.js            # Routes module for the module
+│   │   │   ├─── user.js            # Routes module for routing
 │   │   │   ├── services            # User services folder
 │   │   │   ├─── user.js            # Database related operations
 │   │   └── v2              # Version 2 APIs for this module

@@ -31,7 +31,8 @@
   },
   "devDependencies": {
     "assert": "^2.0.0",
-    "chai": "^4.3.7",
+    "chai": "^4.3.8",
+    "chai-http": "^4.4.0",
     "mocha": "^10.2.0",
     "sequelize-cli": "^6.6.0",
     "supertest": "^6.3.3"

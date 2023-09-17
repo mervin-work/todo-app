@@ -1,11 +1,6 @@
 'use strict';
 const logger = require('../../../../utils/logger').child({name: 'auth'});
-const {create, 
-       update,
-       findAll,
-       findByPk,
-       destroy
-} = require('../../services/v1/todo');
+const todoService = require('../services/todo');
 const httpConstants = require('http2').constants;
 
 /**
@@ -14,10 +9,10 @@ const httpConstants = require('http2').constants;
  */
 
 //Create Todo
-const createTodo = ()=> {
+const create = ()=> {
 
     return (req, res) =>
-    create(req.body.data)
+    todoService.create(req.body.data)
     .then(data => {
         res.status(httpConstants.HTTP_STATUS_CREATED).json({
             status: true,
@@ -36,10 +31,10 @@ const createTodo = ()=> {
 };
 
 //Find All Todos
-const findAllTodo = () => {
+const findAll = () => {
 
     return (req, res) => {
-        findAll(req.query.limit, req.query.offset)
+        todoService.findAll(req.query.limit, req.query.offset)
             .then(data => {
                 res.status(httpConstants.HTTP_STATUS_OK).json({
                     status: true,
@@ -58,9 +53,9 @@ const findAllTodo = () => {
 };
 
 //Find Todo
-const findByPkTodo = () => {
+const findByPk = () => {
     return (req, res) => {
-        findByPk(req.params.id)
+        todoService.findByPk(req.params.id)
         .then(data => {
             res.status(httpConstants.HTTP_STATUS_OK).json({
                 status: true,
@@ -80,9 +75,9 @@ const findByPkTodo = () => {
 
 
 //Update Todo
-const updateTodo = ()=> {
+const update = ()=> {
     return (req, res) => {
-        update(req.params.id, req.body.data)
+        todoService.update(req.params.id, req.body.data)
             .then(data => {
                 res.status(httpConstants.HTTP_STATUS_OK).json({
                     status: true,
@@ -103,9 +98,9 @@ const updateTodo = ()=> {
 };
 
 //Destroy Todo
-const destroyTodo = () => {
+const destroy = () => {
     return (req, res) => {
-        destroy(req.params.id)
+        todoService.destroy(req.params.id)
             .then(() => {
                 res.status(httpConstants.HTTP_STATUS_OK).json({
                     status: true,
@@ -123,6 +118,6 @@ const destroyTodo = () => {
 };
 
 module.exports = {
-    createTodo, findAllTodo, 
-    findByPkTodo, updateTodo, destroyTodo 
+    create, findAll, 
+    findByPk, update, destroy
 }
